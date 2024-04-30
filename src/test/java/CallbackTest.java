@@ -77,7 +77,7 @@ public class CallbackTest {
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         driver.findElement(By.cssSelector("button.button")).click();
         assertEquals("Поле обязательно для заполнения",
-                driver.findElement(By.cssSelector("[data-test-id=name].input_invalid .input__sub")).getText().trim());
+                driver.findElement(By.cssSelector("[data-test-id=phone].input_invalid .input__sub")).getText().trim());
         assertTrue(driver.findElement(By.cssSelector("[data-test-id=phone].input_invalid .input__sub")).isDisplayed());
     }
 
@@ -88,7 +88,7 @@ public class CallbackTest {
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         driver.findElement(By.cssSelector("button.button")).click();
         assertEquals("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.",
-                driver.findElement(By.cssSelector("[data-text-id=phone].input_invalid .input__sub")).getText().trim());
+                driver.findElement(By.cssSelector("[data-test-id=phone].input_invalid .input__sub")).getText().trim());
     }
 
     @Test
